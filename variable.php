@@ -5,7 +5,7 @@
 //So We can also accesss them like $GLOBALS['name'], $GLOBALS['city']
 $name="Pankaj";
 $city="Anupgarh";
-
+$country="india";
 
 echo "My Name is ".$name;
 echo "<br><br>";
@@ -15,7 +15,8 @@ function display()
 {
     $color="green";
     //Local scope - Variable can be accessed only in this function
-    GLOBAL $name, $city;
+    GLOBAL $name, $city,$country;
+
     echo "<p style='color:$color;'>In Display Fuunction My Name is $name</p>";
 }
 
@@ -26,3 +27,4 @@ echo "After Display function, show again global My Name is ".$student;
 
 
 <h1>I live in <?php echo $city; ?></h1>
+<h1>I live in <?php echo $country; ?></h1>
