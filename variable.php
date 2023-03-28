@@ -25,6 +25,6 @@ display();
 
 ?>
 
-
+<h1>my name is <?php echo $name; ?></h1>
 <h1>I live in <?php echo $city; ?></h1>
 <h1>I live in <?php echo $country; ?></h1>
