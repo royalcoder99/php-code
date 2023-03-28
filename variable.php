@@ -22,7 +22,7 @@ function display()
 
 display();
 
-echo "After Display function, show again global My Name is ".$student;
+
 ?>
 
 
