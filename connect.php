@@ -1,9 +1,9 @@
 <?php
 
 $servername = "db4free.net";
-$username = "sharma249";
-$password = "#geet249";
-$database = "student1";
+$username = "dheeraj12";
+$password = "pankaj@123";
+$database = "dheeraj";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -12,6 +12,6 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if (!$conn) {
   die("Connection failed: ". mysqli_connect_error());
 }
-// else 
-// echo "Connected successfully";
+ else 
+ echo "Connected successfully";
 ?>

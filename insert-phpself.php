@@ -4,13 +4,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
     require "connect.php";
 
+    $rollno=$_POST["RollNo"];
     $name=$_POST["name"];
+    $fathername=$_POST["FathersName"];
     $city=$_POST["city"];
-    $mobile=$_POST["mobile"];
-    // var_dump($name,$city,$mobile);
+    // var_dump($RollNo,$name, $FathersName,$city);
     
-    $sql="INSERT INTO `personal` (`name`,`city`,`mobile`) VALUES ('$name','$city','$mobile')";
-    
+    $sql="INSERT INTO `dhiraj` (`RollNo.`, `name`,`FathersName`,`city`) VALUES ('$RollNo', '$name','$FathersName','$city')";
+    echo "<br>";
+    echo $sql;
+    echo "<br>";
     if ($conn->query($sql) === TRUE) {
         $last_id = $conn->insert_id;
         $message="<div class='alert alert-success'>New record created successfully. Last inserted ID is: " . $last_id."</div>";
@@ -32,9 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <body>
 
 <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" class="m-auto w-25">
+<input type=text class="form-control my-3" name=RollNo value="" placeholder="enter roll_no here">
 <input type=text class="form-control my-3" name=name value="" placeholder="enter name here">
+<input type=text class="form-control my-3" name=Fathersname value="" placeholder="enter father's_name  here">
 <input type=text class="form-control my-3" name=city value="" placeholder="enter city here">
-<input type=text class="form-control my-3" name=mobile value="" placeholder="enter mobile here">
+
 <div>
 <?php echo $message; ?>
 </div>
