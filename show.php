@@ -9,20 +9,20 @@
 
 require "connect.php";
 
-$sql="SELECT * from `karun`";
+$sql="SELECT * from `yash`";
 
 $result=$conn->query($sql);
 
 echo "<table class='table table-striped'>".
-     "<tr><th>rollno</th><th>Name</th> <th>fatherame</th> <th>mothername</th></tr>";
+     "<tr><th>name</th><th>dob</th> <th>city</th> <th>country</th></tr>";
 
 while($row = $result->fetch_assoc()) 
 {
     echo "<tr>".
-         "<td>".$row['rollno']."</td>".
          "<td>".$row['name']."</td>".
-         "<td>".$row['fathername']."</td>".
-         "<td>".$row['mothername']."</td>".
+         "<td>".$row['dob']."</td>".
+         "<td>".$row['city']."</td>".
+         "<td>".$row['country']."</td>".
          "</tr>";
 }
     echo "</table>";
