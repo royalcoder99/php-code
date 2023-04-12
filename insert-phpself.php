@@ -4,13 +4,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
     require "connect.php";
 
-    $rollno=$_POST["RollNo"];
+    $rollno=$_POST["rollno"];
     $name=$_POST["name"];
-    $fathername=$_POST["FathersName"];
-    $city=$_POST["city"];
+    $fathername=$_POST["fathername"];
+    $mothername=$_POST["mothername"];
     // var_dump($RollNo,$name, $FathersName,$city);
     
-    $sql="INSERT INTO `dhiraj` (`RollNo.`, `name`,`FathersName`,`city`) VALUES ('$RollNo', '$name','$FathersName','$city')";
+    $sql="INSERT INTO `karun` (`rollno`, `name`,`fathername`,`mothername) VALUES ('$rollno', '$name','$fathername','$mothername')";
     echo "<br>";
     echo $sql;
     echo "<br>";
@@ -35,10 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <body>
 
 <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" class="m-auto w-25">
-<input type=text class="form-control my-3" name=RollNo value="" placeholder="enter roll_no here">
+<input type=text class="form-control my-3" name=rollno value="" placeholder="enter rollno here">
 <input type=text class="form-control my-3" name=name value="" placeholder="enter name here">
-<input type=text class="form-control my-3" name=Fathersname value="" placeholder="enter father's_name  here">
-<input type=text class="form-control my-3" name=city value="" placeholder="enter city here">
+<input type=text class="form-control my-3" name=fathername value="" placeholder="enter fathername  here">
+<input type=text class="form-control my-3" name=mothername value="" placeholder="enter mothername here">
 
 <div>
 <?php echo $message; ?>
