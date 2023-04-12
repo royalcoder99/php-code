@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $dob=$_POST["dob"];
     $city=$_POST["city"];
     $country=$_POST["country"];
-    // var_dump($RollNo,$name, $FathersName,$city);
+    //var_dump($RollNo,$name, $FathersName,$city);
     
     $sql="INSERT INTO `yash` (`name`, `dob`,`city`,`country) VALUES ('$name', '$dob','$city','$country')";
     echo "<br>";
