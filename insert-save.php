@@ -2,13 +2,13 @@
 
 require "connect.php";
 
+$rollno=$_POST["rollno"];
 $name=$_POST["name"];
-$dob=$_POST["dob"];
-$city=$_POST["city"];
-$country=$_POST["country"];
+$fathername=$_POST["fathername"];
+$mothername=$_POST["mothername"];
 // var_dump($name,$city,$mobile);
 
-$sql="INSERT INTO `yash` (`name`,`dob`,`city`,`country`) VALUES ('$name','$dob','$city','$country')";
+$sql="INSERT INTO `students` (`rollno`,`name`,`fathername`,`mothername`) VALUES ('$rollno','$name','$fathername','$mothername')";
 
 if ($conn->query($sql) === TRUE) {
     $last_id = $conn->insert_id;
